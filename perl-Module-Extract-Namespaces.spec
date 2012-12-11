@@ -1,20 +1,20 @@
 %define upstream_name    Module-Extract-Namespaces
 %define upstream_version 0.14
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	3
 
-Summary:    Extract the package declarations from a module
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Extract the package declarations from a module
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(PPI)
-BuildRequires: perl(Test::More)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(PPI)
+BuildRequires:	perl(Test::More)
+BuildArch:	noarch
 
 %description
 This module extracts package declarations from Perl code without running
@@ -28,24 +28,30 @@ It does not extract:
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-%{make} test
+%make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes LICENSE README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
 
 
+%changelog
+* Mon Apr 25 2011 Funda Wang <fwang@mandriva.org> 0.140.0-2mdv2011.0
++ Revision: 658862
+- rebuild for updated spec-helper
+
+* Wed Aug 12 2009 Jérôme Quelin <jquelin@mandriva.org> 0.140.0-1mdv2010.0
++ Revision: 415572
+- import perl-Module-Extract-Namespaces
+
+
+* Wed Aug 12 2009 cpan2dist 0.14-1mdv
+- initial mdv release, generated with cpan2dist
