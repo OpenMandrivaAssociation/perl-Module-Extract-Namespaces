@@ -1,15 +1,15 @@
 %define upstream_name    Module-Extract-Namespaces
-%define upstream_version 0.14
+%define upstream_version 1.01
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Extract the package declarations from a module
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Module/Module-Extract-Namespaces-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(PPI)
@@ -55,3 +55,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Aug 12 2009 cpan2dist 0.14-1mdv
 - initial mdv release, generated with cpan2dist
+
