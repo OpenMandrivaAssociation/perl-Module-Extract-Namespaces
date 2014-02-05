@@ -1,5 +1,5 @@
 %define upstream_name    Module-Extract-Namespaces
-%define upstream_version 1.01
+%define upstream_version 1.02
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -55,4 +55,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Aug 12 2009 cpan2dist 0.14-1mdv
 - initial mdv release, generated with cpan2dist
+
 

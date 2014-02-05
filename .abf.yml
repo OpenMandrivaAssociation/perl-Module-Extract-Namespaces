@@ -1,4 +1,5 @@
 removed_sources:
   Module-Extract-Namespaces-0.14.tar.gz: 83f45717013dbe5a3da077108eed39a778419eac
-sources:
   Module-Extract-Namespaces-1.01.tar.gz: 47d877ce903ebb7377361212cfac3bd0e5a4802c
+sources:
+  Module-Extract-Namespaces-1.02.tar.gz: da723cccc6e7a1580b541442d84d6b80646e14e1
