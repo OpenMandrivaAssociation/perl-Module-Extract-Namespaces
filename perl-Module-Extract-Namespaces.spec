@@ -8,7 +8,7 @@ Release:	3
 Summary:	Extract the package declarations from a module
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Module/Module-Extract-Namespaces-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
