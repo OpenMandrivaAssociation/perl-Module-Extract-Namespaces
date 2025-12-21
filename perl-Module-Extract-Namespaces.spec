@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Module/Module-Extract-Namespaces-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(PPI)
 BuildRequires:	perl(Test::More)
