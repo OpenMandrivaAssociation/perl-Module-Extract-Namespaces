@@ -1,15 +1,15 @@
 %define upstream_name    Module-Extract-Namespaces
-%define upstream_version 1.02
+%define upstream_version 1.026
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Extract the package declarations from a module
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/Module-Extract-Namespaces-%{upstream_version}.tar.gz
+Url:		https://github.com/briandfoy/module-extract-namespaces
+Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Module-Extract-Namespaces-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
