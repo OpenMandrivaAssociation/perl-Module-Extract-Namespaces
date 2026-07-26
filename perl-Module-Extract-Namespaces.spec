@@ -1,15 +1,13 @@
 %define upstream_name    Module-Extract-Namespaces
-%define upstream_version 1.026
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.026
+Release:	2
 
 Summary:	Extract the package declarations from a module
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/briandfoy/module-extract-namespaces
-Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Module-Extract-Namespaces-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Module-Extract-Namespaces-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ It does not extract:
 * * packages declared dynamically (e.g. in 'eval')
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
